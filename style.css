@@ -1,0 +1,307 @@
+@charset "utf-8";
+#top {
+	background-image: url(images/header_bg.jpg);
+	background-repeat: no-repeat;
+	height: 208px;
+	width: 980px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#top .logo {
+	display: block;
+	float: left;
+	height: 120px;
+	width: 979px;
+}
+#top .nav {
+	float: left;
+	height: 30px;
+	width: 899px;
+	padding-bottom: 57px;
+	padding-right: 40px;
+	padding-left: 40px;
+}
+#top .nav .navtext {
+	display: block;
+	float: left;
+	height: 23px;
+	padding-top: 7px;
+	width: 898px;
+}
+#top .nav .navtext li{
+	padding-right: 10px;
+	padding-left: 10px;
+	font-family: "黑体";
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	float: left;
+	height: 23px;
+	width: auto;
+}
+#main {
+	height: 1200px;
+	width: 935px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding-right: 5px;
+	padding-left: 40px;
+
+}
+#main .pic {
+	display: block;
+	float: left;
+	height: 300px;
+	width: 934px;
+}
+#main .content {
+	display: block;
+	float: left;
+	height: auto;
+	width: 934px;
+	background-color: #FFFFFF;
+}
+.content .cleft {
+	display: block;
+	float: left;
+	height: auto;
+	width: 727px;
+}
+.cleft .cl1 {
+	display: block;
+	float: left;
+	height: 300px;
+	width: 716px;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+.cl1 .picnews {
+	display: block;
+	float: left;
+	height: 300px;
+	width: 400px;
+}
+.cl1 .topnews {
+	display: block;
+	float: left;
+	height: 300px;
+	width: 295px;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+.cleft .cl2 {
+	display: block;
+	float: left;
+	height: 200px;
+	width: 706px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+.content_title {
+	background-image: url(images/content_title.jpg);
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 25px;
+	width: 695px;
+	padding-top: 9px;
+	padding-left: 10px;
+	font-family: "时尚中黑简体";
+	color: #573216;
+	font-weight: bold;
+	font-size: 16px;
+}
+.cl2 .cl2text {
+	font-size: 14px;
+	line-height: 1.5;
+	display: block;
+	padding: 5px;
+	float: left;
+	height: 155px;
+	width: 695px;
+	overflow: hidden;
+}
+
+
+.cleft .cl3 {
+	display: block;
+	float: left;
+	height: 150px;
+	width: 706px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.cl3 .cl3pic {
+	display: block;
+	float: left;
+	height: 105px;
+	width: 706px;
+}
+
+.cleft .cl4 {
+	display: block;
+	float: left;
+	height: 180px;
+	width: 706px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.cl4 .cl4content {
+	display: block;
+	float: left;
+	height: 179px;
+	width: 342px;
+	padding-right: 10px;
+}
+.content_title1 {
+	background-image: url(images/content_title.jpg);
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 25px;
+	width: 332px;
+	padding-top: 9px;
+	padding-left: 10px;
+	font-family: "时尚中黑简体";
+	color: #573216;
+	font-weight: bold;
+	font-size: 16px;
+}
+.cl4 .cl4content .cl4text {
+	display: block;
+	float: left;
+	height: auto;
+	width: 342px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.cl4 .cl4content .cl4text ul li {
+	list-style-position: inside;
+	list-style-type: disc;
+}
+
+
+
+.content .cright {
+	display: block;
+	float: left;
+	height: auto;
+	width: 206px;
+}
+.cright .cr1 {
+	display: block;
+	float: left;
+	height: 200px;
+	width: 205px;
+	padding-top: 10px;
+}
+.siderbar_title {
+	background-image: url(images/sidebar_title1.jpg);
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 25px;
+	width: 195px;
+	font-size: 16px;
+	padding-top: 9px;
+	padding-left: 10px;
+	font-family: "时尚中黑简体";
+	color: #573216;
+	font-weight: bold;
+}
+.cright .cr1 .cr1text {
+	display: block;
+	float: left;
+	height: 155px;
+	width: 204px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#main .content ul li {
+	font-size: 12px;
+	line-height: 1.5;
+	list-style-position: inside;
+	list-style-type: disc;
+}
+
+
+.cright .cr2 {
+	float: left;
+	height: 350px;
+	width: 205px;
+	padding-top: 10px;
+	display: block;
+}
+.cright .cr2 .cr2text {
+	display: block;
+	float: left;
+	height: 315px;
+	width: 204px;
+}
+
+.cright .cr3 {
+	float: left;
+	height: 180px;
+	width: 205px;
+	padding-top: 10px;
+	display: block;
+}
+.cright .cr3 .cr3text {
+	display: block;
+	float: left;
+	height: 135px;
+	width: 204px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.cright .cr4 {
+	float: left;
+	height: 100px;
+	width: 205px;
+	padding-top: 10px;
+	display: block;
+}
+.cright .cr4 .cr4text {
+	display: block;
+	float: left;
+	height: 55px;
+	width: 204px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#foot {
+	background-image: url(images/footer_design.jpg);
+	background-repeat: no-repeat;
+	height: 187px;
+	width: 980px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#foot .foottext {
+	font-size: 12px;
+	color: #999;
+	display: block;
+	padding: 10px;
+	float: left;
+	height: auto;
+	width: 959px;
+}
+#foot .foottext div {
+	height: 12px;
+	width: auto;
+	display: block;
+	float: right;
+}

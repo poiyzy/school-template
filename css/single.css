@@ -1,0 +1,204 @@
+@charset "utf-8";
+#top {
+	background-image: url(../images/header_bg.jpg);
+	background-repeat: no-repeat;
+	height: 208px;
+	width: 980px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#top .logo {
+	display: block;
+	float: left;
+	height: 120px;
+	width: 979px;
+}
+#top .nav {
+	float: left;
+	height: 30px;
+	width: 899px;
+	padding-bottom: 57px;
+	padding-right: 40px;
+	padding-left: 40px;
+}
+#top .nav .navtext {
+	display: block;
+	float: left;
+	height: 23px;
+	padding-top: 7px;
+	width: 898px;
+}
+#top .nav .navtext li{
+	padding-right: 10px;
+	padding-left: 10px;
+	font-family: "黑体";
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	float: left;
+	height: 23px;
+	width: auto;
+}
+#main {
+	min-height:600px;
+	height: auto;
+	width: 935px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding-right: 5px;
+	padding-left: 40px;
+
+}
+#main .mainL {
+	background-color: #FFFFFF;
+	display: block;
+	float: left;
+	height: auto;
+	width: 614px;
+	padding-right: 19px;
+	padding-top: 10px;
+}
+.mainL .content {
+	display: block;
+	float: left;
+	height: auto;
+	width: 613px;
+	min-height:300px;
+}
+
+.mainL .content .title {
+	font-size: 24px;
+	line-height: 1.5;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+	float: left;
+	height: 40px;
+	width: 612px;
+}
+.mainL .content .subtitle {
+	font-size: 12px;
+	color: #999;
+	display: block;
+	float: left;
+	height: 20px;
+	width: 612px;
+	padding-top: 5px;
+	text-align: center;
+}
+.mainL .content .context {
+	display: block;
+	padding: 10px;
+	float: left;
+	height: auto;
+	width: 592px;
+	font-size: 14px;
+	line-height: 1.5;
+}
+.mainL .comment {
+	display: block;
+	float: left;
+	height: 100px;
+	width: 613px;
+}
+.mainL .comment .ctitle {
+	background-image: url(../images/comment_title.jpg);
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 25px;
+	width: 582px;
+	padding-top: 9px;
+	padding-left: 30px;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "时尚中黑简体";
+	color: #573216;
+}
+.mainL .comment .ctext {
+	display: block;
+	float: left;
+	height: auto;
+	width: 612px;
+}
+
+
+
+
+
+#main .mainR {
+	background-color: #FFFFFF;
+	display: block;
+	float: left;
+	height: auto;
+	width: 301px;
+	padding-top: 10px;
+}
+.mainR .mrcontent {
+	display: block;
+	float: left;
+	height: auto;
+	width: 300px;
+}
+.mainR .mrcontent .mrtitle {
+	font-family: "时尚中黑简体";
+	font-size: 16px;
+	background-image: url(../images/sidebar_title_bg.jpg);
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 25px;
+	width: 290px;
+	padding-top: 9px;
+	padding-left: 10px;
+	font-weight: bold;
+	color: #573216;
+}
+.mainR .mrcontent .mrtext {
+	display: block;
+	float: left;
+	height: auto;
+	width: 290px;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+}
+.mainR .mrcontent .mrtext ul li {
+	list-style-position: inside;
+	list-style-type: disc;
+}
+
+
+
+
+
+#foot {
+	background-image: url(../images/footer_design.jpg);
+	background-repeat: no-repeat;
+	height: 187px;
+	width: 980px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#foot .foottext {
+	font-size: 12px;
+	color: #999;
+	display: block;
+	padding: 10px;
+	float: left;
+	height: auto;
+	width: 959px;
+}
+#foot .foottext div {
+	height: 12px;
+	width: auto;
+	display: block;
+	float: right;
+}
