@@ -4,6 +4,57 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>山西省网上家长学校特约联盟校</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/s3Slider.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#slider').s3Slider({
+            timeOut: 6000
+        });
+    });
+</script>
+<script type="text/javascript">
+/*
+滑动门
+*/
+function scrollDoor(){
+}
+scrollDoor.prototype = {
+ sd : function(menus,divs,openClass,closeClass){
+  var _this = this;
+  if(menus.length != divs.length)
+  {
+   alert("菜单层数量和内容层数量不一样!");
+   return false;
+  }    
+  for(var i = 0 ; i < menus.length ; i++)
+  { 
+   _this.$(menus[i]).value = i;    
+   _this.$(menus[i]).onmouseover = function(){
+     
+    for(var j = 0 ; j < menus.length ; j++)
+    {      
+     _this.$(menus[j]).className = closeClass;
+     _this.$(divs[j]).style.display = "none";
+    }
+    _this.$(menus[this.value]).className = openClass; 
+    _this.$(divs[this.value]).style.display = "block";    
+   }
+  }
+  },
+ $ : function(oid){
+  if(typeof(oid) == "string")
+  return document.getElementById(oid);
+  return oid;
+ }
+}
+window.onload = function(){
+ var SDmodel = new scrollDoor();
+ SDmodel.sd(["m01","m02"],["c01","c02"],"sd01","sd02");
+ SDmodel.sd(["mm01","mm02"],["cc01","cc02"],"sd01","sd02");
+ SDmodel.sd(["mmm01","mmm02"],["ccc01","ccc02"],"sd01","sd02");
+}
+</script>
 <style>
 body,h1,h2,h3,h4,h5,h6,p,ul,li,dl,dt,dd{padding:0;margin:0;}
 li{
@@ -16,13 +67,157 @@ body {
 	background-image:url(images/bg_tile.jpg);
 	background-repeat: repeat;
 }
+/*图片*/
+#slider {
+    width: 397px; /* important to be same as image width */
+    height: 299px; /* important to be same as image height */
+    position: relative; /* important */
+	overflow: hidden; /* important */
+}
+#slider img{
+    border: 0px;
+}
+
+#sliderContent {
+    width: 397px; /* important to be same as image width or wider */
+    position: absolute;
+	top: 0;
+	margin-left: 0;
+}
+.sliderImage {
+    float: left;
+    position: relative;
+	display: none;
+}
+.sliderImage span {
+    position: absolute;
+	font: 12px/14px Arial, Helvetica, sans-serif;
+    padding: 10px 13px;
+    width: 371px;
+    background-color: #000;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+	-khtml-opacity: 0.7;
+    opacity: 0.7;
+    color: #fff;
+    display: none;
+}
+.clear {
+	clear: both;
+}
+.sliderImage span strong {
+    font-size: 14px;
+}
+.top {
+	top: 0;
+	left: 0;
+}
+.bottom {
+	bottom: 0;
+    left: 0;
+}
+ul { list-style-type: none;}
 </style>
+<style>
+#c01 li {
+	height:25px;
+	list-style:inside;
+	overflow:hidden;
+	line-height: 1.8;
+}
+#c02 li {
+	height:25px;
+	list-style:inside;
+	overflow:hidden;
+	line-height: 1.8;
+}
+#c03 li {
+	height:25px;
+	list-style:inside;
+	overflow:hidden;
+	line-height: 1.8;
+}
+#c04 li {
+	height:25px;
+	list-style:inside;
+	overflow:hidden;
+	line-height: 1.8;
+}
+#c05 li {
+	height:25px;
+	list-style:inside;
+	overflow:hidden;
+	line-height: 1.8;
+}
+</style>
+<style>
+.preview{margin:0px;padding:0px;overflow:hidden;}
+.cont{
+	padding:10px;
+	font-size: 14px;
+	color: #16387C;
+}
+.cls{clear:both;}
+.hidden{display:none;}
+.scrolldoorFrame{
+	width:293px;
+	overflow:hidden;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+.scrollUl{
+	width:284px;
+	border-bottom:1px solid #CCC;
+	overflow:hidden;
+	height:20px;
+	padding-top: 9px;
+	padding-left: 10px;
+}
+.scrollUl li{float:left;}
+.bor03{
+}
+.sd01{
+	cursor:pointer;
+	font-weight:bold;
+	font-size: 16px;
+	width: 90px;
+	color: #573216;
+}
+.sd02{
+	cursor:pointer;
+	font-size: 16px;
+	width: 90px;
+	color: #573216;
+}
+</style>
+<style>
+.dfwh1{
+text-align:center;}
+.dfwh2{
+	width:705px;
+	height:104px;
+	background-image:url(../image/dfwhbg.jpg);
+	background-repeat:repeat-x;
+	background-position:bottom;
+	overflow:hidden;
+}
+.gunall{
+width:140px;
+text-align:center;
+}
+.guntu{}
+.gungzi{
+margin-top:5px;}
+</style>
+
 </head>
 
 <body>
 <div id="top">
 	<div class="logo"></div>
-	<div class="nav">
+	<div class="nav">	
 		<div class="navtext">
 			<ul>
 				<li>首页</li>
@@ -40,8 +235,80 @@ body {
 	<div class="content">
 		<div class="cleft">
 			<div class="cl1">
-				<div class="picnews"></div>
-				<div class="topnews"></div>
+				<div class="picnews">
+                	
+						<div id="slider">
+       						 <ul id="sliderContent">
+          						 <li class="sliderImage">
+               						 <a href="http://www.zcool.com.cn/" target="_blank"><img src="images/news/1.jpg" alt="1" /></a>
+              					     <span class="top"><strong>站酷收集</strong><br />站酷(ZCOOL)-素材分享与设计交流……</span>
+          					     </li>
+         					     <li class="sliderImage">
+                         			 <a href="http://www.zcool.com.cn/" target="_blank"><img src="images/news/2.jpg" alt="2" /></a>
+              				     	 <span class="top"><strong>站酷-www.zcool.com.cn</strong><br />站酷(ZCOOL)-素材分享与设计交流站酷(ZCOOL)-素材分享与设计交流站酷(ZCOOL)-素材分享与设计交流站酷(ZCOOL)-素材分享与设计交流站酷(ZCOOL)-素材分享与设计交流站酷(ZCOOL)-素材分享与设计交流</span>
+           						 </li>
+           						 <li class="sliderImage">
+              					    <a href="http://www.zcool.com.cn/" target="_blank"><img src="images/news/3.jpg" alt="3" /></a>
+          					        <span class="bottom"><strong>站酷-ZCOOL</strong><br />不错的代码...</span>
+          					    </li>
+          					    <li class="sliderImage">
+            					    <a href="http://www.zcool.com.cn/" target="_blank"><img src="images/news/4.jpg" alt="4" /></a>
+           					       <span class="bottom"><strong>站酷-ZCOOL 2</strong><br />站酷(ZCOOL)-素材分享与设计交流站酷(ZCOOL)-素材分享与设计交流...</span>
+          					    </li>
+           					    <li class="sliderImage">
+           					        <a href="http://www.zcool.com.cn/" target="_blank"><img src="images/news/5.jpg" alt="5" /></a>
+            					    <span class="top"><strong>站酷-ZCOOL 3</strong><br />站酷(ZCOOL)-素材分享与设计交流站酷(ZCOOL)-素材分享与设计交流站酷(ZCOOL)-素材分享与设计交流...</span>
+           					    </li>
+           					    <div class="clear sliderImage"></div>
+        					 </ul>
+				  </div>
+					
+                </div>
+				<div class="topnews">
+                	<div class="newstitle">最新动态</div>
+                    <div class="newstext">
+                    	
+                        <div class="preview">
+  							<div class="scrolldoorFrame">
+								 <ul class="scrollUl">
+									<li class="sd01" id="m01">本校动态</li>
+									<li class="sd02" id="m02">联盟校动态</li>
+								 </ul>
+   								<div class="bor03 cont">
+    								<div id="c01">
+    								<ul>
+    									<li>1</li>
+                                        <li>1</li>
+                                        <li>1</li>
+                                        <li>1</li>
+                                        <li>1</li>
+                                        <li>1</li>
+										<li>1</li>
+										<li>1</li>
+										
+    								</ul>
+  						
+									</div>
+									<div id="c02" class="hidden">
+								 	<ul>
+								 		<li>2</li>
+                                        <li>2</li>
+                                        <li>2</li>
+                                        <li>2</li>
+                                        <li>2</li>
+                                        <li>2</li>
+										<li>2</li>
+										<li>2</li>
+    								</ul>
+  						
+									</div>
+									
+					    		</div>
+							</div>
+						</div>
+                
+                    </div>
+                </div>
 			</div>
 			<div class="cl2">
 				<div class="content_title">学校简介</div>
@@ -49,7 +316,127 @@ body {
 			</div>
 			<div class="cl3">
 				<div class="content_title">校园一角</div>
-				<div class="cl3pic"></div>
+				<div class="cl3pic">
+                		
+                        				<div  id="aaa" class="dfwh2">
+					<div>
+        <table>
+                <tr>
+                    <td id="aaa1">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+        <td align="center">
+		<div class="gunall">
+		<div class="guntu"><a href="#"><img style="border:0; width:122px; height:98px;" src="images/gun1.jpg"  /></a></div>
+		</div>
+		</td>
+		 <td align="center">
+		<div class="gunall">
+		<div class="guntu"><a href="#"><img style="border:0; width:122px; height:98px;" src="images/gun1.jpg"  /></a></div>
+		</div>
+		</td>
+ <td align="center">
+		<div class="gunall">
+		<div class="guntu"><a href="#"><img style="border:0; width:122px; height:98px;" src="images/gun1.jpg"  /></a></div>
+		</div>
+		</td>
+ <td align="center">
+		<div class="gunall">
+		<div class="guntu"><a href="#"><img style="border:0; width:122px; height:98px;" src="images/gun1.jpg"  /></a></div>
+		</div>
+		</td>
+ <td align="center">
+		<div class="gunall">
+		<div class="guntu"><a href="#"><img style="border:0; width:122px; height:98px;" src="images/gun1.jpg"  /></a></div>
+		</div>
+		</td>
+ <td align="center">
+		<div class="gunall">
+		<div class="guntu"><a href="#"><img style="border:0; width:122px; height:98px;" src="images/gun1.jpg"  /></a></div>
+		</div>
+		</td>
+ <td align="center">
+		<div class="gunall">
+		<div class="guntu"><a href="#"><img style="border:0; width:122px; height:98px;" src="images/gun1.jpg"  /></a></div>
+		</div>
+		</td>
+ <td align="center">
+		<div class="gunall">
+		<div class="guntu"><a href="#"><img style="border:0; width:122px; height:98px;" src="images/gun1.jpg"  /></a></div>
+		</div>
+		</td>
+ <td align="center">
+		<div class="gunall">
+		<div class="guntu"><a href="#"><img style="border:0; width:122px; height:98px;" src="images/gun1.jpg"  /></a></div>
+		</div>
+		</td>
+ <td align="center">
+		<div class="gunall">
+		<div class="guntu"><a href="#"><img style="border:0; width:122px; height:98px;" src="images/gun1.jpg"  /></a></div>
+		</div>
+		</td>
+ <td align="center">
+		<div class="gunall">
+		<div class="guntu"><a href="#"><img style="border:0; width:122px; height:98px;" src="images/gun1.jpg"  /></a></div>
+		</div>
+		</td>
+ <td align="center">
+		<div class="gunall">
+		<div class="guntu"><a href="#"><img style="border:0; width:122px; height:98px;" src="images/gun1.jpg"  /></a></div>
+		</div>
+		</td>
+ <td align="center">
+		<div class="gunall">
+		<div class="guntu"><a href="#"><img style="border:0; width:122px; height:98px;" src="images/gun1.jpg"  /></a></div>
+		</div>
+		</td>
+ <td align="center">
+		<div class="gunall">
+		<div class="guntu"><a href="#"><img style="border:0; width:122px; height:98px;" src="images/gun1.jpg"  /></a></div>
+		</div>
+		</td>
+ <td align="center">
+		<div class="gunall">
+		<div class="guntu"><a href="#"><img style="border:0; width:122px; height:98px;" src="images/gun1.jpg"  /></a></div>
+		</div>
+		</td>
+ <td align="center">
+		<div class="gunall">
+		<div class="guntu"><a href="#"><img style="border:0; width:122px; height:98px;" src="images/gun1.jpg"  /></a></div>
+		</div>
+		</td>
+ <td align="center">
+		<div class="gunall">
+		<div class="guntu"><a href="#"><img style="border:0; width:122px; height:98px;" src="images/gun1.jpg"  /></a></div>
+		</div>
+		</td>
+  </tr>
+</table>
+                    </td>
+                    <td id="aaa2"></td>
+                </tr>
+            </table>
+       </div>
+       <SCRIPT language="javascript">
+var speed1=10 //
+aaa2.innerHTML=aaa1.innerHTML
+function Marquee1(){
+if(aaa2.offsetWidth-aaa.scrollLeft<=0)
+{
+ aaa.scrollLeft-=aaa2.offsetWidth}
+else{
+aaa.scrollLeft++
+}
+}
+var MyMrr=setInterval(Marquee1,speed1)
+aaa.onmouseover=function() {clearInterval(MyMrr)}
+aaa.onmouseout=function() {MyMrr=setInterval(Marquee1,speed1)}
+</SCRIPT>
+
+		
+</div>
+                
+                </div>
 			</div>
 			<div class="cl4">
 				<div class="cl4content">
