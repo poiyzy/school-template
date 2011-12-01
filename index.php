@@ -66,7 +66,7 @@ li{
 }
 img{border:none;}
 body {
-	background-image:url(images/bg_tile.jpg);
+	background-image:url(<?php bloginfo('template_url'); ?>/images/bg_tile.jpg);
 	background-repeat: repeat;
 }
 /*图片*/
