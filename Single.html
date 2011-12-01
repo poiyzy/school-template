@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>山西省网上家长学校特约联盟校</title>
-<link href="css/single.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
+<title><?php the_title(); ?>---太原市新西小学</title>
+<link href="<?php bloginfo('template_url'); ?>/css/single.css" rel="stylesheet" type="text/css" />
 <style>
 body,h1,h2,h3,h4,h5,h6,p,ul,li,dl,dt,dd{
 	padding:0;
@@ -41,9 +41,12 @@ body {
 <div id="main">
 	<div class="mainL">
 		<div class="content">
-			<div class="title">迎泽区举办2011年中小学生跳绳、踢毽子比赛</div>
-			<div class="subtitle">发布时间：2011年11月28日      信息来源：太原晚报</div>
-			<div class="context">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26日上午，由迎泽区教育局主办的该区中小学生跳绳、踢毽子比赛在贵都小学举行，来自全区40余所中小学的1200余名小选手参加了这次比赛。比赛中，小选手们个个精神抖擞，体现出了良好的精神面貌和竞技水平。</div>
+            <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
+                <div class="title"><?php the_title(); ?></div>
+                <div class="subtitle">发布时间：2011年11月28日      信息来源：太原晚报</div>
+                <div class="context"><?php the_content(); ?></div>
+            <?php endwhile; ?>
+            <?php endif; ?>
 		</div>
         <div class="comment">
 		  <div class="ctitle">评论</div>
