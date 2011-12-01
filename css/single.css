@@ -1,6 +1,6 @@
 @charset "utf-8";
 #top {
-	background-image: url(../images/header_bg.jpg);
+	background-image: url(./images/header_bg.jpg);
 	background-repeat: no-repeat;
 	height: 208px;
 	width: 980px;
